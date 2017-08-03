@@ -1,0 +1,30 @@
+<%= form_for(@message, remote: true, :html => { :role => "form" }) do |f| %>
+<div id="error_explanation" class="bg-danger text-danger">
+</div>
+
+<div class="row">
+ <div class="col-sm-12">
+  <div class="form-group">
+    <%= f.label :name, :class => "control-label" %>
+    <%= f.text_field :name, :class => "form-control first_input"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => "control-label" %>
+    <%= f.text_field :description, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :telphone, :class => "control-label" %>
+    <%= f.text_field :telphone, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => "control-label" %>
+    <%= f.text_field :email, :class => "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit  @message.new_record? ? "Create Create" : "Update Customer", :class => "btn btn-primary" %>
+  </div>
+</div>
+</div>
+<% end %>

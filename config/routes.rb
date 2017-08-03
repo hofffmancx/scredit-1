@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  # get 'messages', to: 'welcome#index'
+  # post 'messages', to: 'welcome#create'
+
 
   devise_for :users
   resources :articlealls  # 资讯聚合页

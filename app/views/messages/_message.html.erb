@@ -1,0 +1,10 @@
+<tr id="message_<%= message.id %>">
+  <td><%= message.name %></td>
+  <td><%= message.description %></td>
+  <td><%= message.email %></td>
+  <td><%= message.telphone %></td>
+  <td>
+    <%= link_to 'Edit', edit_message_path(message), remote: true, :class => 'btn btn-sm btn-info' %>
+    <%= link_to 'Delete', message, remote: true, :method => :delete, data: {confirm: "Delete Customer: #{message.name} #{message.description}"}, :class => 'btn btn-sm btn-danger' %>
+  </td>
+</tr>
